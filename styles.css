@@ -1,0 +1,479 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #fff9cf,
+            #fff5a5 40%,
+            #ffe978 100%
+        );
+
+    color: #403812;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* ---------------- */
+/* PANTALLA INICIAL */
+/* ---------------- */
+
+.inicio {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    min-height: 100dvh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fffce9,
+            #fff2a1 60%,
+            #f8d84e
+        );
+
+    z-index: 1000;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+
+.inicio.desaparecer {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.inicio-contenido {
+    max-width: 500px;
+    text-align: center;
+
+    animation: aparecer 1.4s ease;
+}
+
+
+.flor-grande {
+    font-size: 90px;
+
+    animation: flotar 3s ease-in-out infinite;
+}
+
+
+.inicio h1 {
+    font-size: clamp(2rem, 8vw, 4rem);
+
+    margin: 20px 0 15px;
+
+    font-weight: 500;
+}
+
+
+.inicio p {
+    font-family: Arial, sans-serif;
+
+    font-size: 1rem;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+button {
+    border: none;
+
+    padding: 15px 26px;
+
+    border-radius: 100px;
+
+    background: #493d0e;
+
+    color: white;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    transform: scale(1.06);
+
+    background: #665719;
+}
+
+
+/* ---------------- */
+/* CONTENIDO */
+/* ---------------- */
+
+.contenido {
+    opacity: 1;
+
+    transition: opacity 1.5s ease;
+}
+
+
+.oculto {
+    display: none;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+
+.flores-decoracion {
+    font-size: clamp(25px, 7vw, 45px);
+
+    margin-bottom: 30px;
+
+    letter-spacing: 10px;
+
+    animation: flotar 4s ease-in-out infinite;
+}
+
+
+.pequeno {
+    font-family: Arial, sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    font-size: clamp(3rem, 13vw, 7rem);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    max-width: 900px;
+}
+
+
+.hero h1 span {
+    display: block;
+
+    font-style: italic;
+
+    color: #bd9210;
+}
+
+
+.mensaje-principal {
+    max-width: 550px;
+
+    margin: 35px auto;
+
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(1rem, 4vw, 1.2rem);
+
+    line-height: 1.8;
+}
+
+
+/* ---------------- */
+/* CARTA */
+/* ---------------- */
+
+.carta {
+    width: min(90%, 700px);
+
+    margin: 0 auto 100px;
+
+    padding: 60px 45px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.55);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 20px 60px rgba(122, 94, 0, 0.15);
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(70px);
+
+    transition: 1s ease;
+}
+
+
+.carta.mostrar {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+.flor-carta {
+    font-size: 70px;
+
+    margin-bottom: 15px;
+}
+
+
+.carta h2 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+
+    margin-bottom: 30px;
+}
+
+
+.carta p {
+    font-family: Arial, sans-serif;
+
+    font-size: 1rem;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+
+.firma {
+    font-family: Georgia, serif !important;
+
+    font-style: italic;
+
+    font-size: 1.3rem !important;
+}
+
+
+/* ---------------- */
+/* INTERACTIVO */
+/* ---------------- */
+
+.interactivo {
+    min-height: 50vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px 120px;
+}
+
+
+.interactivo h2 {
+    font-size: clamp(2rem, 8vw, 4rem);
+
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+
+.interactivo p {
+    font-family: Arial, sans-serif;
+}
+
+
+/* ---------------- */
+/* BOTÓN MÚSICA */
+/* ---------------- */
+
+.control-musica {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    z-index: 900;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.2);
+
+    animation: pulso 2s infinite;
+}
+
+
+/* ---------------- */
+/* FLORES CREADAS */
+/* ---------------- */
+
+.flor-creada {
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 50;
+
+    animation: crecerFlor 1.5s forwards;
+}
+
+
+/* ---------------- */
+/* ANIMACIONES */
+/* ---------------- */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(3deg);
+    }
+
+}
+
+
+@keyframes pulso {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+}
+
+
+@keyframes crecerFlor {
+
+    0% {
+        opacity: 0;
+        transform:
+            translate(-50%, -50%)
+            scale(0)
+            rotate(-30deg);
+    }
+
+    60% {
+        opacity: 1;
+        transform:
+            translate(-50%, -50%)
+            scale(1.3)
+            rotate(10deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform:
+            translate(-50%, -50%)
+            scale(1)
+            rotate(0deg);
+    }
+
+}
+
+
+/* ---------------- */
+/* CELULAR */
+/* ---------------- */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 30px 20px;
+    }
+
+
+    .flores-decoracion {
+        letter-spacing: 3px;
+    }
+
+
+    .carta {
+        padding: 45px 25px;
+
+        border-radius: 25px;
+    }
+
+
+    .control-musica {
+        width: 48px;
+        height: 48px;
+
+        right: 15px;
+        bottom: 15px;
+    }
+
+}

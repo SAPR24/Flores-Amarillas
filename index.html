@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Flores Amarillas 🌼</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Pantalla inicial -->
+    <section id="inicio" class="inicio">
+
+        <div class="inicio-contenido">
+            <div class="flor-grande">🌻</div>
+
+            <h1>Para que no seas espectadora...</h1>
+
+            <p>
+                Una pequeña sorpresa hecha con esfuerzo y luchando contra que no se fuera la luz
+            </p>
+
+            <button id="botonEntrar">
+                Abrir sorpresa 
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- Página principal -->
+    <main id="contenido" class="contenido oculto">
+
+        <section class="hero">
+
+            <div class="flores-decoracion">
+                🌼 🌻 🌼 🌻 🌼
+            </div>
+
+            <p class="pequeno">
+                PARA MAJA
+            </p>
+
+            <h1>
+                Flores amarillas
+                <span>para Ma Cherie.</span>
+            </h1>
+
+            <p class="mensaje-principal">
+                Porque personas como tu no se encuentran mucho mas en esta sociedad
+            </p>
+
+            <button id="botonMensaje">
+                Toca aquí 
+            </button>
+
+        </section>
+
+
+        <!-- Mensaje oculto -->
+        <section id="carta" class="carta">
+
+            <div class="flor-carta">
+                🌻
+            </div>
+
+            <h2>Para ti Marce</h2>
+
+            <p>
+                Tal vez no tenga la oportunidad de dartelas hoy en la universidad 
+                pero te has vuelto una gran amiga para mi, gracias por haberme ayudado 
+                en lo que necesite y esto es lo menos que puedo hacer por ti
+            </p>
+
+            <p>
+                Agradezco que coincidieramos en una universidad tan grande y llena de 
+                personas que tu y yo sabemos como son, espero que podamos seguir siendo 
+                amigos de aqui hasta que uno se gradue o rinda y mucho mas
+            </p>
+
+            <p class="firma">
+                Con cariño, Sam
+            </p>
+
+        </section>
+
+
+        <!-- Instrucción -->
+        <section class="interactivo">
+
+            <h2>Crea tu propio jardín 🌻</h2>
+
+            <p>
+                Toca cualquier parte de la pantalla.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Control de música -->
+    <button
+        id="controlMusica"
+        class="control-musica oculto"
+        aria-label="Pausar o reproducir música"
+    >
+        ♫
+    </button>
+
+
+    <!-- Archivo de música -->
+<audio id="musicaFondo" loop>
+    <source src="assets/floresamarillascancion.mp3" type="audio/mpeg">
+</audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
